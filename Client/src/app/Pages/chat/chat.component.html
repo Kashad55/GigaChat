@@ -1,0 +1,121 @@
+
+<main class="user-app-container">
+  <div class="chat-container">
+    <app-sidebar></app-sidebar>
+    <div class="chat-contacts-container">
+
+      <div class="chat-contacts-header-container">
+
+        <div class="flex">
+        <h3>Messages</h3>
+          <div class="toggle-buuton">
+            <button class="message-input-container" (click)="toggleAutoRefresh()">{{autoRefresh ? 'Stop Auto Refresh': 'Start Auto Refresh'}}</button>
+          </div>
+        </div>
+
+        <input placeholder="Search Users" [(ngModel)]="searchInput" ngModel  (input)="filterContact()"/>
+
+      </div>
+      
+
+      <div class="contacts-container">
+
+        <h3>Conversation List</h3>
+
+        <div *ngFor="let friend of userSuggestion">
+
+          <div class="friend-card " (click)="handleGoToChat(friend.userId)">
+
+            <div class="friend-name">
+
+              <!--<img [src]="friend.avatar" alt="pic" />-->
+
+              <p >{{friend.userName}}</p>
+
+            </div>
+
+            <!--<p>{{friend.status}}</p>-->
+            <!--<button (click)="removeContact(friend)">Remove</button>-->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="chat-empty-container" *ngIf="friendOnChat == -1">
+
+      <h3>Start Conversation</h3>
+
+    </div>
+
+    <div #chatBox class="chat-box" *ngIf="friendOnChat != -1">
+
+      <div class="header">
+
+        <div class="header-name">
+
+          <button (click)="handleGoBack()"> < BACK </button>
+
+          <!--<img [src]="friend.avatar" alt="avatar" />-->
+
+          <p>{{friend.userName}}</p>
+
+        </div>
+
+        <input placeholder="Search Messages ..." [(ngModel)]="searchMessage" ngModel  (input)="filterMessages()" class="header-input" />
+
+      </div>
+
+      <div class="message-container">
+
+        <div *ngFor="let msg of messages" class="msgs">
+
+          <div *ngIf="msg.senderId==uniqueUserId" class="you-chat-bubble-container">
+
+            <div class="you-chat-bubble">
+
+              <p>{{msg.messageText}}</p>
+
+            </div>
+            <p id="time">
+              {{msg.sendAt | date: 'shortTime'}}
+            </p>
+            
+
+          </div>
+
+          <div *ngIf="msg.senderId==friendOnChat" class="person-chat-bubble-container">
+
+            <div class="person-chat-bubble">
+
+              <p>{{msg.messageText}}</p>
+
+            </div>
+            <p id="time">
+              {{msg.sendAt | date: 'shortTime'}}
+            </p>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="message-input-container">
+
+        <input placeholder="Enter Message ..." [(ngModel)]="sendInput" ngModel/>
+
+
+        <button (click)="sendMessage()">SEND ></button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>

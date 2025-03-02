@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.DataAccessLayer", "GigaChat.ChatMicroServices\Chat.DataAccessLayer\Chat.DataAccessLayer.csproj", "{09827422-8333-456E-BACF-DD758878051A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.ServiceLayer", "GigaChat.ChatMicroServices\Chat.ServiceLayer\Chat.ServiceLayer.csproj", "{291764C0-3A0E-499A-B195-03FFBF274A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User.DataAccessLayer", "GigaChat.UserMicroservice\User.DataAccessLayer\User.DataAccessLayer.csproj", "{75F9A09E-21AE-4C15-8DC5-E4683E28A061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserServices", "GigaChat.UserMicroservice\User.ServiceLayer\UserServices.csproj", "{550A28B4-99A3-4A36-997B-047E0657DACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09827422-8333-456E-BACF-DD758878051A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09827422-8333-456E-BACF-DD758878051A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09827422-8333-456E-BACF-DD758878051A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09827422-8333-456E-BACF-DD758878051A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291764C0-3A0E-499A-B195-03FFBF274A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291764C0-3A0E-499A-B195-03FFBF274A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291764C0-3A0E-499A-B195-03FFBF274A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291764C0-3A0E-499A-B195-03FFBF274A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F9A09E-21AE-4C15-8DC5-E4683E28A061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F9A09E-21AE-4C15-8DC5-E4683E28A061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F9A09E-21AE-4C15-8DC5-E4683E28A061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F9A09E-21AE-4C15-8DC5-E4683E28A061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550A28B4-99A3-4A36-997B-047E0657DACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550A28B4-99A3-4A36-997B-047E0657DACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550A28B4-99A3-4A36-997B-047E0657DACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550A28B4-99A3-4A36-997B-047E0657DACE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

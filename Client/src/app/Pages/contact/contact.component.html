@@ -1,0 +1,28 @@
+<div class="contacts">
+    <app-sidebar></app-sidebar>
+    <div class="view-contacts flex-c ">
+      <div class="first-section flex-c">
+        <p>View Contacts</p>
+        <!--<input type="text" p">-->
+        <input type="text" name="search" placeholder="Search users to add in contact..." #searchref="ngModel" [(ngModel)]="searchInput" (input)="getAllUser()" class="search-box" ngModel required>
+
+        <p>Blocked Contacts</p>
+      </div>
+      <div class="contact-list flex-c">
+        <p>All Contacts</p>
+        <div class="contact-action flex" *ngFor="let user of userList">
+          <p>{{user.userName}}</p>
+          <div>
+            <button class="action-btn" (click)="blockUnblock(user)"  *ngIf="!blocked">Block</button>
+            <button class="action-btn" (click)="blockUnblock(user)" *ngIf="blocked">Un-block</button>
+            <button class="action-btn" (click)="addContact(user.userId)">Add Chat</button>
+          </div>
+        </div>
+        <div *ngIf="showDiv">
+          {{msg}}
+        </div>
+
+
+      </div>
+    </div>
+</div>

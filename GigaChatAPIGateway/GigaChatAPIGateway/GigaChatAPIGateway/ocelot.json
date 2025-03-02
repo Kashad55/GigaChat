@@ -1,0 +1,37 @@
+{
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:7004"
+    },
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/User",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 44379
+                }
+            ],
+            "UpstreamPathTemplate": "/user",
+            "UpstreamHttpMethod": [ "POST", "GET" ],
+            "AddQueriesToParameters": {
+                "a": 0
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/Chat/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 44314
+                }
+            ],
+            "UpstreamPathTemplate": "/chat",
+            "UpstreamHttpMethod": [ "POST", "GET", "DELETE" ],
+            "AddQueriesToParameters": {
+                "a" :  0
+            }
+        }
+    ]
+}

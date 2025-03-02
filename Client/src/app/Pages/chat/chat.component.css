@@ -1,0 +1,235 @@
+.chat-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-contacts-container {
+  width: 35%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000, rgb(127, 118, 247));
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0px;
+  gap: 15px;
+}
+
+.chat-empty-container {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  background: hsl(210, 16%, 25%);
+  color: white;
+}
+
+.chat-empty-container > h3 {
+  background: grey;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.chat-contacts-header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  padding: 20px;
+}
+
+  .chat-contacts-header-container > input {
+    width: 100%;
+    background: hsl(224, 21%, 22%);
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    border: none;
+    outline: none;
+  }
+
+.contacts-container {
+  flex: 1;
+  overflow-y: auto;
+  color: white;
+  height: 100%;
+}
+
+  .contacts-container > h3 {
+    margin-bottom: 20px;
+    padding: 0px 20px;
+  }
+
+.friend-card {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-top: 1px solid rgb(125, 123, 123);
+  background-color: hsl(225, 20%, 19%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+  .friend-card:hover {
+    background: hsl(222, 33%, 36%);
+  }
+
+  .friend-card > .friend-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+    .friend-card > .friend-name > img {
+      height: 25px;
+      width: 25px;
+    }
+
+
+
+/*--------------------------------------------------------------------------------*/
+
+.chat-box {
+  flex: 1;
+  background: hsl(210, 16%, 25%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height:100vh;
+}
+
+  .chat-box > .header {
+      height:20%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .chat-box > .message-container {
+      height:80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+/*    overflow-y: auto;*/
+    justify-content: flex-end;
+    padding:3vmin;
+    overflow-y:scroll;
+  }
+  #time{
+      font-size:2vmin;
+  }
+
+  .chat-box > .message-input-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid grey;
+  }
+
+    .chat-box > .message-input-container > input {
+      flex: 1;
+      background: hsl(224, 21%, 22%);
+      border-radius: 15px;
+      padding: 15px;
+      color: white;
+      border: none;
+      outline: none;
+    }
+
+  button {
+        cursor:pointer;
+      padding: 15px;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+    }
+ button:hover{
+        background-color:aquamarine;
+        color:#000;
+    }
+.header {
+  border-bottom: 1px solid grey;
+}
+
+  .header > input {
+    background: hsl(224, 21%, 22%);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    width: 300px;
+  }
+
+.header-name > button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.header-name > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.header-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.msgs{
+    width:100%;
+}
+
+
+.you-chat-bubble-container {
+  display: flex;
+  gap: 0.5vmin;
+  align-items: self-end;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.person-chat-bubble-container {
+  display: flex;
+  gap:0.5vmin;
+  align-items: self-start;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.you-chat-bubble, .person-chat-bubble {
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.you-chat-bubble {
+  background: hsl(224, 21%, 22%);
+  float: right;
+}
+
+.person-chat-bubble {
+  background: rgba(0,0,0,0.6);
+  float: left;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chat", "Chat", "{E17B7EB0-126F-475B-BC29-8F4EEEEE9F14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{D1BF2824-2928-4E53-A4CC-E48E98CA327F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.DataAccessLayer", "GigaChat\GigaChat.ChatMicroServices\Chat.DataAccessLayer\Chat.DataAccessLayer.csproj", "{C1BE09F6-BC88-4F2A-BF26-A7624DC4631C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.ServiceLayer", "GigaChat\GigaChat.ChatMicroServices\Chat.ServiceLayer\Chat.ServiceLayer.csproj", "{6F5824CD-0B68-4ADE-A4C5-6D26D69ABF16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User.DataAccessLayer", "GigaChat\GigaChat.UserMicroservice\User.DataAccessLayer\User.DataAccessLayer.csproj", "{D7365553-ED20-40D1-B8A1-B5346D22BA44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserServices", "GigaChat\GigaChat.UserMicroservice\User.ServiceLayer\UserServices.csproj", "{C32902B4-3E4C-496B-A6ED-96A1BB52C320}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1BE09F6-BC88-4F2A-BF26-A7624DC4631C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1BE09F6-BC88-4F2A-BF26-A7624DC4631C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1BE09F6-BC88-4F2A-BF26-A7624DC4631C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1BE09F6-BC88-4F2A-BF26-A7624DC4631C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F5824CD-0B68-4ADE-A4C5-6D26D69ABF16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5824CD-0B68-4ADE-A4C5-6D26D69ABF16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5824CD-0B68-4ADE-A4C5-6D26D69ABF16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5824CD-0B68-4ADE-A4C5-6D26D69ABF16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7365553-ED20-40D1-B8A1-B5346D22BA44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7365553-ED20-40D1-B8A1-B5346D22BA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7365553-ED20-40D1-B8A1-B5346D22BA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7365553-ED20-40D1-B8A1-B5346D22BA44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C32902B4-3E4C-496B-A6ED-96A1BB52C320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32902B4-3E4C-496B-A6ED-96A1BB52C320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32902B4-3E4C-496B-A6ED-96A1BB52C320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32902B4-3E4C-496B-A6ED-96A1BB52C320}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1BE09F6-BC88-4F2A-BF26-A7624DC4631C} = {E17B7EB0-126F-475B-BC29-8F4EEEEE9F14}
+		{6F5824CD-0B68-4ADE-A4C5-6D26D69ABF16} = {E17B7EB0-126F-475B-BC29-8F4EEEEE9F14}
+		{D7365553-ED20-40D1-B8A1-B5346D22BA44} = {D1BF2824-2928-4E53-A4CC-E48E98CA327F}
+		{C32902B4-3E4C-496B-A6ED-96A1BB52C320} = {D1BF2824-2928-4E53-A4CC-E48E98CA327F}
+	EndGlobalSection
+EndGlobal

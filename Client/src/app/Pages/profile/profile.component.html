@@ -1,0 +1,119 @@
+<main class="user-app-container">
+  <app-sidebar></app-sidebar>
+    <div class="profile-container">
+
+      <div class="frame">
+        <!-- Profile Section -->
+        <div class="profile ">
+          <!-- Avatar Section -->
+          <div class="profile-picture-container">
+
+            <div class="availability"> </div>
+
+          </div>
+          <!-- User Details Section -->
+          <div class="user-details-container">
+
+            <div class="user-details">
+              <img [src]="images" alt="Profile Picture" id="profile-picture" />
+
+
+              <div class="profile-header">
+
+                <h2> My Profile</h2>
+
+              </div>
+              <!-- Display Name Section -->
+              <div class="property-container">
+
+
+
+                <div class="content edit-box">
+
+                  <input type="text" name="username" id="display-name" class="content" #username="ngModel" [ngModel]="userName" ngModel [disabled]="!isEditing" />
+
+                  <span class="icon-container">
+
+                    <i class="edit-icon" (click)="enableEdit()" *ngIf="!isEditing"> ✏️</i>
+
+                    <i class="save-icon" (click)="saveEdit(username.value)" *ngIf="isEditing"> ✔️</i>
+
+                    <i class="cancel-icon" (click)="cancelEdit()" *ngIf="isEditing"> ❌</i>
+
+                  </span>
+
+                </div>
+
+              </div>
+              <!-- Email Section -->
+              <div class="property-container">
+
+                <div class="title">
+
+                  <label for="email" class="h4"> Email</label>
+
+                </div>
+
+                <input type="text" id="email" class="content" value="john.doe@example.com" disabled />
+
+              </div>
+              <!-- Date of Birth Section -->
+              <div class="property-container">
+
+                <div class="title">
+
+                  <label for="dob" class="h4"> Date of Birth</label>
+
+                </div>
+
+                <input type="text" id="dob" class="content" value="Jan 1, 1990" disabled />
+
+              </div>
+              <!-- Availability Status Section -->
+              <div class="property-container">
+
+                <div class="title">
+
+                  <label for="availability" class="h4"> Status</label>
+
+                </div>
+
+                <select id="availability" class="content">
+
+                  <option value="available"> Available</option>
+
+                  <option value="busy"> Busy</option>
+
+                  <option value="brb"> Be right back</option>
+
+                  <option value="dnd"> Do Not Disturb</option>
+
+                  <option value="offline"> Appear Offline</option>
+
+                </select>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!--Avatar Picker Section-->
+        <div class="update-picture " *ngFor="let avatars of avatarOptions" (click)="updateAvatar(avatars)">
+
+          <ul class="avatar-options">
+
+            <i class="avatar-picker"><img [src]="avatars" alt="avataroptions"></i>
+
+          </ul>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+</main>

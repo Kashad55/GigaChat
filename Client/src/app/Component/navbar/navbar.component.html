@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="navbar-list">
+    <div class="logo-container">
+      <img src="./assets/Icons/Brand/logo.png" alt="logo" />
+      <p>GigaCHAT</p>
+    </div>
+    <div class="navbar-list-item" *ngIf="!loggedIn">
+      <a routerLink="/login" class="nav-link button">Login</a>
+      <a routerLink="/signup" class="nav-link button">Signup</a>
+    </div>
+    <div class="navbar-list-item" *ngIf="loggedIn">
+      <a routerLink="/login" class="nav-link button" (click)="logout()">Logout</a>
+      <a routerLink="/chat" class="nav-link button">Chat</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,303 @@
+/* .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-bar {
+    margin: 20px 0;
+  }
+  
+  .conversation-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .conversation-list div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .conversation-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  } */
+ /* You can add global styles to this file, and also import other style files */
+/* .bor{
+    border: 2px solid red;
+  }
+#main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#nav{
+    height: 100vh;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#msg-container{
+    height: 100vh;
+    width: 30%;
+}
+#chat-container{
+    height: 100vh;
+    width: 60%;
+}
+.logo1{
+    width: 100%;
+    height: 30%;
+}
+.nav-items ul li{
+    list-style: none;
+    color : white;
+}
+.nav-items ul {
+    height: 100%;
+    gap: 5%;
+}
+.nav-items{
+    height: 40%;
+    width: 100%;
+}
+.logo{
+    height: 100%;
+    width: 100%;
+}
+.flex-c{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.flex{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+} */
+
+/* Reset some basic styling */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    background-color: #f0f0f0; /* Light background */
+    color:#fff;
+
+}
+
+/* Main container layout */
+
+#main {
+
+    display: flex;
+
+    height: 100vh;
+
+    width: 100vw;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background-color: #fff;
+
+}
+
+
+/* Messages container */
+.head1{
+    display: flex;
+    gap: 8vmin;
+    justify-content: space-between;
+    width: 100%;
+}
+.header{
+    margin: 2vmin;
+    gap: 5vmin;
+    position: relative;
+}
+.header input{
+    width: 95%;
+    padding: 1vmin;
+    border-radius: 1vmin;
+}
+#msg-container {
+
+    width: 25%;
+
+    background-color: #1e1e1e; /* Dark background */
+
+    color: #fff;
+
+    overflow-y: auto;
+
+}
+
+#msg-container .conversation-list {
+
+    list-style: none;
+
+    padding: 20px;
+
+}
+
+#msg-container .conversation-list li {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #333;
+
+    cursor: pointer;
+
+}
+
+#msg-container .conversation-list li img {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    margin-right: 10px;
+
+}
+
+/* Chat container */
+
+#chat-container {
+
+    flex: 1;
+
+    background-color: #2d2222; /* Light background */
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+#chat-container .profile-placeholder {
+
+    width: 100px;
+
+    height: 100px;
+
+    background-color: #ddd;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+#chat-container .profile-placeholder::after {
+
+    content: "";
+
+    width: 60%;
+
+    height: 10px;
+
+    background-color: #bbb;
+
+    display: block;
+
+    margin-top: 10px;
+
+    border-radius: 5px;
+
+}
+
+.suggestion-box{
+    background-color: white;
+    height: 25vh;
+    width: 95%;
+    overflow-y: scroll;
+    color: #000;
+    position: absolute;
+    top: 15vmin;
+}
+.suggestion-box ul {
+    width: 100%;
+    list-style: none;
+}
+.suggestion-box ul li{
+    width: 100%;
+    height: 100%;
+    padding: 2vmin 3vmin;
+    border-bottom: 1px solid rgb(216, 216, 216);
+
+}
+.suggestion-box ul li:hover{
+    background-color: rgb(212, 211, 211);
+}
+
+

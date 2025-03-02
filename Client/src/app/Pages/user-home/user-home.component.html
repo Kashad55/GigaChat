@@ -1,0 +1,105 @@
+<!-- <div class="container">
+    <aside class="sidebar ">
+      <ul>
+        <li><a routerLink="/profile">View Profile</a></li>
+        <li><a routerLink="/conversations">Conversations</a></li>
+        <li><a routerLink="/contacts">View Contacts</a></li>
+        <li><a routerLink="/feedback">Feedback</a></li>
+        <li><a routerLink="/themes">Themes</a></li>
+        <li><a routerLink="/logout">Logout</a></li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <div class="header">
+        <h1>Messages</h1>
+        <button (click)="toggleRefresh()">{{ isAutoRefresh ? 'Auto-Refresh' : 'Manual Refresh' }}</button>
+        <button *ngIf="!isAutoRefresh" (click)="refreshChats()">Refresh</button>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search users" [(ngModel)]="searchQuery" (input)="filterContacts()" />
+      </div>
+      <div class="conversation-list">
+        <label>Conversation List</label>
+        <div *ngFor="let contact of filteredContacts">
+            <div (click)="openChat(contact)">
+                <img [src]="contact.avatar" alt="Profile Picture" />
+                <div>
+                  <h2>{{ contact.name }}</h2>
+                  <p>{{ contact.status }}</p>
+                  <span>{{ contact.unreadMessages }}</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+  </div> -->
+<!-- <div id="main">
+    <div id="nav" class="bor">
+        <div>
+            <img src="../../assets/Icons/Brand/logo.png" class="logo1">
+        </div>
+        <div class="nav-items">
+            <ul class="flex-c">
+                <li><i>nav1</i></li>
+                <li><i>nav1</i></li>
+                <li><i>nav1</i></li>
+                <li><i>nav1</i></li>
+            </ul>
+        </div>
+        <div class="nav-items">
+           <ul class="flex-c">
+                <li><i>nav1</i></li>
+                <li><i>nav1</i></li>
+                <li><img src="../../assets/Icons/ProfilePictures/Men/man (1).png" alt="profile picture" class="logo"></li>
+           </ul>
+        </div>
+    </div>
+    <div id="msg-container"  class="bor">
+
+    </div>
+    <div id="chat-container"  class="bor">
+
+    </div>
+</div> -->
+
+<div id="main"> <!-- Navigation Panel -->
+    <app-sidebar></app-sidebar> 
+    <!-- Messages Container -->
+    <div id="msg-container" class="">
+        <div class="header flex-c">
+            <div class="head1 flex">
+                <h2>Messages</h2> 
+                <button id="theme-toggle">Toggle Theme</button>
+            </div>
+
+          <input type="search" name="search" placeholder="Search users" #searchref="ngModel" [(ngModel)]="searchInput" (input)="searchContact()" class="search-box" ngModel required>
+
+            <div class="suggestion-box" *ngIf="showSuggestionDiv">
+              <ul class="flex-c">
+                <li *ngFor="let user of userSuggestion">
+                   <a (click)="userSelected(user)">{{user.userName}}</a> 
+                  <!--<a>Hello</a>-->
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div class="conversation-list">
+            <div class="flex" style="justify-content: space-between;">
+                <h4>Conversation List</h4>
+                <button>Refresh</button>
+            </div>
+          <ul>
+            <li *ngFor="let user of userSuggestion">
+              <a (click)="userSelected(user)">{{user.userName}}</a>
+            </li>
+          </ul>
+            <div *ngIf="showDiv">
+              {{msg}}
+            </div>
+        </div>
+    </div>
+ <!-- Chat Container -->
+    <div id="chat-container" class="">
+        <div class="profile-placeholder">  Placeholder for profile icon  </div>
+    </div>
+</div>
